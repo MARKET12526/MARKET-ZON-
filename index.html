@@ -1,1 +1,106 @@
 
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MARKET ZON | Telegram Gifts</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b0e17;color:#fff;font-family:Arial,sans-serif}
+header{padding:22px 6%;display:flex;justify-content:space-between;align-items:center;background:#121725;border-bottom:1px solid #252d40}
+.logo{font-size:24px;font-weight:bold;color:#65e5c2}
+header span{color:#aaa;font-size:13px}
+.hero{text-align:center;padding:45px 15px}
+.hero h1{font-size:34px;margin:10px;color:#65e5c2}
+.hero p{color:#aaa}
+.search{width:90%;max-width:450px;padding:14px;border-radius:12px;border:1px solid #343d50;background:#171e2d;color:white;margin-top:15px}
+.categories{text-align:center;margin:10px}
+.categories button{padding:10px 17px;margin:5px;border:0;border-radius:20px;background:#202b3b;color:white}
+.categories button.active{background:#65e5c2;color:#08120f}
+.products{padding:20px 6%;display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:16px}
+.card{background:#151c2a;border:1px solid #273349;border-radius:16px;padding:12px;text-align:center}
+.art{height:125px;border-radius:12px;display:grid;place-items:center;font-size:65px;background:linear-gradient(135deg,#243e58,#34294f)}
+.card h3{font-size:16px}
+.price{color:#65e5c2;font-weight:bold}
+.card button{width:100%;padding:11px;border:0;border-radius:9px;background:#65e5c2;color:#07130f;font-weight:bold}
+footer{text-align:center;padding:30px;color:#777}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">MARKET ZON</div>
+<span>Telegram Gift Marketplace</span>
+</header>
+<section class="hero">
+<h1>MARKET ZON</h1>
+<p>بازار خرید و فروش گیفت و NFT تلگرام</p>
+<input class="search" id="search" placeholder="جستجوی گیفت..." oninput="filter()">
+</section>
+<div class="categories">
+<button class="active" onclick="category('all',this)">همه</button>
+<button onclick="category('gift',this)">گیفت تلگرام</button>
+<button onclick="category('nft',this)">NFT</button>
+</div>
+<main class="products" id="products">
+<div class="card" data-type="gift">
+<div class="art">🎁</div>
+<h3>Premium Gift</h3>
+<p class="price">500 Stars</p>
+<button onclick="buy('Premium Gift')">مشاهده و خرید</button>
+</div>
+<div class="card" data-type="nft">
+<div class="art">💎</div>
+<h3>Diamond NFT</h3>
+<p class="price">1,200 Stars</p>
+<button onclick="buy('Diamond NFT')">مشاهده و خرید</button>
+</div>
+<div class="card" data-type="gift">
+<div class="art">🌹</div>
+<h3>Rose Gift</h3>
+<p class="price">250 Stars</p>
+<button onclick="buy('Rose Gift')">مشاهده و خرید</button>
+</div>
+<div class="card" data-type="nft">
+<div class="art">🚀</div>
+<h3>Rocket NFT</h3>
+<p class="price">2,000 Stars</p>
+<button onclick="buy('Rocket NFT')">مشاهده و خرید</button>
+</div>
+<div class="card" data-type="gift">
+<div class="art">🏆</div>
+<h3>Trophy Gift</h3>
+<p class="price">800 Stars</p>
+<button onclick="buy('Trophy Gift')">مشاهده و خرید</button>
+</div>
+<div class="card" data-type="nft">
+<div class="art">🧸</div>
+<h3>Bear NFT</h3>
+<p class="price">950 Stars</p>
+<button onclick="buy('Bear NFT')">مشاهده و خرید</button>
+</div>
+</main>
+<footer>© 2026 MARKET ZON | Demo Marketplace</footer>
+<script>
+let selected='all';
+function category(type,btn){
+selected=type;
+document.querySelectorAll('.categories button').forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+filter();
+}
+function filter(){
+let q=document.getElementById('search').value.toLowerCase();
+document.querySelectorAll('.card').forEach(c=>{
+let matchType=selected==='all'||c.dataset.type===selected;
+let matchName=c.innerText.toLowerCase().includes(q);
+c.style.display=matchType&&matchName?'block':'none';
+});
+}
+function buy(name){
+alert('این نسخه نمایشی است. انتخاب شما: '+name+' | پرداخت واقعی فعال نیست.');
+}
+</script>
+</body>
+</html>
