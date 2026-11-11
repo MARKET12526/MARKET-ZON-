@@ -1,106 +1,91 @@
 
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MARKET ZON | Telegram Gifts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#090d16">
+<title>MARKET ZON — بازار گیفت و NFT تلگرام</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#0b0e17;color:#fff;font-family:Arial,sans-serif}
-header{padding:22px 6%;display:flex;justify-content:space-between;align-items:center;background:#121725;border-bottom:1px solid #252d40}
-.logo{font-size:24px;font-weight:bold;color:#65e5c2}
-header span{color:#aaa;font-size:13px}
-.hero{text-align:center;padding:45px 15px}
-.hero h1{font-size:34px;margin:10px;color:#65e5c2}
-.hero p{color:#aaa}
-.search{width:90%;max-width:450px;padding:14px;border-radius:12px;border:1px solid #343d50;background:#171e2d;color:white;margin-top:15px}
-.categories{text-align:center;margin:10px}
-.categories button{padding:10px 17px;margin:5px;border:0;border-radius:20px;background:#202b3b;color:white}
-.categories button.active{background:#65e5c2;color:#08120f}
-.products{padding:20px 6%;display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:16px}
-.card{background:#151c2a;border:1px solid #273349;border-radius:16px;padding:12px;text-align:center}
-.art{height:125px;border-radius:12px;display:grid;place-items:center;font-size:65px;background:linear-gradient(135deg,#243e58,#34294f)}
-.card h3{font-size:16px}
-.price{color:#65e5c2;font-weight:bold}
-.card button{width:100%;padding:11px;border:0;border-radius:9px;background:#65e5c2;color:#07130f;font-weight:bold}
-footer{text-align:center;padding:30px;color:#777}
+:root{--bg:#090d16;--panel:#111827;--panel2:#151f30;--line:#263348;--muted:#94a3b8;--text:#f4f7fb;--mint:#65e5c2;--mint2:#2fc7a2;--gold:#f5c76a;--red:#fb7185;--blue:#7c9cff;--radius:18px;--shadow:0 18px 50px #0005}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#183044 0,transparent 45%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.6}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,94%);margin:auto}
+.topbar{position:sticky;top:0;z-index:20;background:#0b111deF;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff12}.topinner{height:74px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:21px;letter-spacing:.5px}.brandmark{width:39px;height:39px;border-radius:13px;background:linear-gradient(135deg,var(--mint),#248f8a);display:grid;place-items:center;color:#06130f;font-size:21px;box-shadow:0 6px 22px #65e5c233}.brand span{color:var(--mint)}.nav{display:flex;align-items:center;gap:22px;color:#c4cfdd;font-size:14px}.nav a:hover,.nav a.active{color:var(--mint)}.top-actions{display:flex;align-items:center;gap:9px}.wallet{border:1px solid #65e5c266;background:#65e5c214;color:var(--mint);border-radius:12px;padding:10px 14px;font-weight:700}.iconbtn{border:1px solid var(--line);background:var(--panel);color:#dce6f3;width:42px;height:42px;border-radius:12px;font-size:18px}
+.hero{padding:46px 0 26px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}.eyebrow{color:var(--mint);font-size:12px;font-weight:800;letter-spacing:1.4px}.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.2;margin:12px 0}.hero h1 em{font-style:normal;color:var(--mint)}.hero p{color:#aab7c9;max-width:620px;margin:0 0 22px}.hero-cta{display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:12px 17px;font-weight:800;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.primary{background:linear-gradient(135deg,var(--mint),#35c7a4);color:#061510;box-shadow:0 8px 24px #46d9b52a}.secondary{background:#1b2638;color:#e7eef8;border:1px solid var(--line)}.hero-art{min-height:230px;border:1px solid #65e5c233;border-radius:26px;background:linear-gradient(135deg,#142d3a,#1b2038 65%,#32264a);position:relative;overflow:hidden;display:grid;place-items:center;box-shadow:var(--shadow)}.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid #65e5c233;border-radius:50%;width:250px;height:250px}.hero-art:after{width:180px;height:180px}.orb{font-size:92px;filter:drop-shadow(0 12px 20px #0008);z-index:1}.float{position:absolute;background:#0b1422cc;border:1px solid #ffffff20;border-radius:12px;padding:8px 12px;font-size:12px;color:#dce8f5}.f1{top:20px;right:20px}.f2{bottom:22px;left:18px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0 26px}.stat{background:#101827;border:1px solid var(--line);border-radius:15px;padding:14px 16px}.stat b{display:block;font-size:19px;color:var(--mint)}.stat small{color:var(--muted)}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:28px 0 15px}.section-head h2{font-size:22px;margin:0}.section-head p{color:var(--muted);font-size:12px;margin:4px 0 0}.filters{background:#101827;border:1px solid var(--line);border-radius:18px;padding:14px;margin-bottom:16px}.searchrow{display:flex;gap:9px}.searchbox{position:relative;flex:1}.searchbox input{width:100%;background:#0b1220;border:1px solid var(--line);color:white;border-radius:12px;padding:12px 42px 12px 12px;outline:none}.searchbox:before{content:"⌕";position:absolute;right:14px;top:4px;color:var(--muted);font-size:25px}.select{background:#0b1220;color:#e9f0f8;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:130px}.chips{display:flex;gap:8px;overflow:auto;padding-top:12px;scrollbar-width:none}.chip{white-space:nowrap;border:1px solid var(--line);background:#172235;color:#cbd5e1;border-radius:30px;padding:8px 14px;font-size:13px}.chip.active{background:var(--mint);color:#07150f;border-color:var(--mint);font-weight:800}
+.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card{background:linear-gradient(160deg,#151f30,#101725);border:1px solid #2b3950;border-radius:18px;padding:11px;min-width:0;transition:.2s;position:relative}.card:hover{transform:translateY(-4px);border-color:#65e5c277;box-shadow:0 14px 30px #0004}.cover{height:150px;border-radius:13px;background:radial-gradient(circle at 30% 20%,#45617b,#282747 70%);display:grid;place-items:center;font-size:66px;position:relative;overflow:hidden}.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#ffffff10,transparent 50%)}.tag{position:absolute;top:9px;right:9px;background:#07111ddd;border:1px solid #ffffff20;border-radius:8px;padding:3px 8px;font-size:10px;color:var(--mint)}.heart{position:absolute;left:9px;top:8px;border:0;background:#07111ddd;color:#fff;border-radius:9px;width:30px;height:30px}.heart.on{color:#fb7185}.card h3{font-size:15px;margin:11px 2px 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.collection{color:var(--muted);font-size:11px;margin:0 2px}.cardfoot{display:flex;justify-content:space-between;align-items:end;margin:12px 2px 9px;gap:6px}.price small{display:block;color:var(--muted);font-size:10px}.price b{color:var(--mint);font-size:16px}.owner{font-size:10px;color:#aebbd0;text-align:left}.cardbuttons{display:grid;grid-template-columns:1fr 1fr;gap:7px}.cardbuttons button{padding:8px 5px;font-size:11px;border-radius:9px}.empty{display:none;text-align:center;color:var(--muted);padding:35px;border:1px dashed var(--line);border-radius:16px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.feature{background:linear-gradient(145deg,#141f30,#0f1725);border:1px solid var(--line);border-radius:17px;padding:17px}.feature .ico{font-size:24px}.feature h3{font-size:15px;margin:8px 0 3px}.feature p{font-size:12px;color:var(--muted);margin:0}
+.panel{background:#101827;border:1px solid var(--line);border-radius:18px;padding:17px;margin:28px 0}.panel h2{margin:0 0 12px;font-size:20px}.activity{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #ffffff10;font-size:13px}.activity:last-child{border:0}.activity span{color:var(--muted)}
+.footer{margin-top:38px;padding:28px 0 95px;border-top:1px solid #ffffff12;color:var(--muted);font-size:12px}.footerinner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.notice{border:1px solid #8b6b2e66;background:#f5c76a12;color:#f6d995;padding:10px 13px;border-radius:12px;font-size:11px;margin:18px 0}
+.bottomnav{display:none;position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b111df2;backdrop-filter:blur(16px);border-top:1px solid #ffffff18;padding:8px 5px calc(8px + env(safe-area-inset-bottom));grid-template-columns:repeat(5,1fr)}.bottomnav button{background:none;border:0;color:#98a7ba;font-size:10px;display:grid;gap:2px;justify-items:center}.bottomnav b{font-size:20px;font-weight:400}.bottomnav button.active{color:var(--mint)}
+.modalback{position:fixed;inset:0;background:#02050bd9;z-index:50;display:none;align-items:center;justify-content:center;padding:16px}.modalback.show{display:flex}.modal{width:min(480px,100%);max-height:90vh;overflow:auto;background:#121c2b;border:1px solid #34445d;border-radius:20px;padding:20px;box-shadow:var(--shadow)}.modalhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.modalhead h3{margin:0}.close{background:#202c3e;border:0;color:white;width:34px;height:34px;border-radius:10px}.field{display:grid;gap:6px;margin:12px 0}.field label{font-size:12px;color:#b7c4d5}.field input,.field select,.field textarea{width:100%;background:#0a1220;border:1px solid var(--line);color:white;border-radius:11px;padding:11px;outline:none}.field textarea{min-height:75px;resize:vertical}.modalnote{font-size:11px;color:var(--muted);line-height:1.8}.toast{position:fixed;bottom:85px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:70;background:#e7fff7;color:#092019;border-radius:12px;padding:10px 16px;font-size:12px;font-weight:800;transition:.25s;box-shadow:var(--shadow);max-width:90%;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:850px){.nav{display:none}.hero{grid-template-columns:1fr;padding-top:30px}.hero-art{min-height:170px}.orb{font-size:70px}.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.cover{height:125px}.feature-grid{grid-template-columns:repeat(2,1fr)}.bottomnav{display:grid}.footer{padding-bottom:110px}}
+@media(max-width:560px){.wrap{width:92%}.topinner{height:62px}.brand{font-size:18px}.brandmark{width:34px;height:34px}.wallet{padding:8px 10px;font-size:11px}.iconbtn{width:37px;height:37px}.hero{gap:14px;padding:28px 0 10px}.hero h1{font-size:34px}.hero p{font-size:13px}.hero-art{min-height:125px}.orb{font-size:56px}.stats{gap:7px}.stat{padding:10px}.stat b{font-size:16px}.stat small{font-size:10px}.section-head h2{font-size:19px}.searchrow{flex-wrap:wrap}.searchbox{flex-basis:100%}.select{flex:1;min-width:0;font-size:12px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{padding:8px;border-radius:15px}.cover{height:112px;font-size:52px}.card h3{font-size:13px}.price b{font-size:14px}.cardbuttons button{font-size:10px;padding:8px 3px}.feature-grid{grid-template-columns:1fr 1fr}.feature{padding:12px}.feature h3{font-size:13px}.feature p{font-size:10px}.panel{padding:13px}.activity{font-size:11px}}
 </style>
 </head>
 <body>
-<header>
-<div class="logo">MARKET ZON</div>
-<span>Telegram Gift Marketplace</span>
-</header>
+<header class="topbar"><div class="wrap topinner">
+  <a class="brand" href="#"><span class="brandmark">✦</span> MARKET <span>ZON</span></a>
+  <nav class="nav"><a class="active" href="#market">بازار</a><a href="#features">امکانات</a><a href="#activity">معاملات</a><a href="#footer">درباره ما</a></nav>
+  <div class="top-actions"><button class="iconbtn" aria-label="اعلان‌ها" onclick="toast('اعلان‌ها در نسخه نمایشی هستند')">♧</button><button class="wallet" onclick="walletConnect()">اتصال کیف پول</button></div>
+</div></header>
+<main class="wrap">
 <section class="hero">
-<h1>MARKET ZON</h1>
-<p>بازار خرید و فروش گیفت و NFT تلگرام</p>
-<input class="search" id="search" placeholder="جستجوی گیفت..." oninput="filter()">
+ <div><div class="eyebrow">TELEGRAM GIFTS • NFT • TON</div><h1>بازار آزاد دارایی‌های<br><em>تلگرام و TON</em></h1><p>گیفت و NFT خودت را با قیمت دلخواه آگهی کن، پیشنهاد بگیر و با معامله‌ای شفاف به خریدار مناسب برس.</p><div class="hero-cta"><button class="btn primary" onclick="openModal('listingModal')">＋ ثبت آگهی رایگان</button><button class="btn secondary" onclick="document.getElementById('market').scrollIntoView({behavior:'smooth'})">مشاهده بازار ←</button></div></div>
+ <div class="hero-art"><span class="float f1">✦ بازار آزاد کاربران</span><div class="orb">🎁💎</div><span class="float f2">قیمت‌گذاری با TON</span></div>
 </section>
-<div class="categories">
-<button class="active" onclick="category('all',this)">همه</button>
-<button onclick="category('gift',this)">گیفت تلگرام</button>
-<button onclick="category('nft',this)">NFT</button>
-</div>
-<main class="products" id="products">
-<div class="card" data-type="gift">
-<div class="art">🎁</div>
-<h3>Premium Gift</h3>
-<p class="price">500 Stars</p>
-<button onclick="buy('Premium Gift')">مشاهده و خرید</button>
-</div>
-<div class="card" data-type="nft">
-<div class="art">💎</div>
-<h3>Diamond NFT</h3>
-<p class="price">1,200 Stars</p>
-<button onclick="buy('Diamond NFT')">مشاهده و خرید</button>
-</div>
-<div class="card" data-type="gift">
-<div class="art">🌹</div>
-<h3>Rose Gift</h3>
-<p class="price">250 Stars</p>
-<button onclick="buy('Rose Gift')">مشاهده و خرید</button>
-</div>
-<div class="card" data-type="nft">
-<div class="art">🚀</div>
-<h3>Rocket NFT</h3>
-<p class="price">2,000 Stars</p>
-<button onclick="buy('Rocket NFT')">مشاهده و خرید</button>
-</div>
-<div class="card" data-type="gift">
-<div class="art">🏆</div>
-<h3>Trophy Gift</h3>
-<p class="price">800 Stars</p>
-<button onclick="buy('Trophy Gift')">مشاهده و خرید</button>
-</div>
-<div class="card" data-type="nft">
-<div class="art">🧸</div>
-<h3>Bear NFT</h3>
-<p class="price">950 Stars</p>
-<button onclick="buy('Bear NFT')">مشاهده و خرید</button>
-</div>
+<div class="stats"><div class="stat"><b id="listingCount">۱,۲۴۸</b><small>آگهی فعال</small></div><div class="stat"><b>۳۸۶</b><small>فروشنده</small></div><div class="stat"><b>۹۲ TON</b><small>حجم معاملات امروز</small></div></div>
+<div class="notice">⚠️ نسخه فعلی نمایشی است: آگهی‌های ساخته‌شده در همین مرورگر ذخیره می‌شوند. اتصال کیف پول، پرداخت، انتقال NFT و تسویه واقعی هنوز فعال نیست.</div>
+<section id="market">
+ <div class="section-head"><div><h2>بازار دارایی‌ها</h2><p>آگهی‌های کاربران را جست‌وجو و فیلتر کن</p></div><button class="btn secondary" onclick="openModal('listingModal')">＋ فروش دارایی</button></div>
+ <div class="filters">
+  <div class="searchrow"><div class="searchbox"><input id="search" placeholder="جست‌وجوی نام گیفت، NFT یا فروشنده..." oninput="renderProducts()"></div><select class="select" id="sort" onchange="renderProducts()"><option value="new">جدیدترین</option><option value="low">ارزان‌ترین</option><option value="high">گران‌ترین</option></select><select class="select" id="kind" onchange="renderProducts()"><option value="all">همه دسته‌ها</option><option value="gift">گیفت تلگرام</option><option value="nft">NFT</option></select></div>
+  <div class="chips" id="chips"><button class="chip active" data-filter="all" onclick="setChip(this)">همه</button><button class="chip" data-filter="gift" onclick="setChip(this)">🎁 گیفت‌ها</button><button class="chip" data-filter="nft" onclick="setChip(this)">💎 NFTها</button><button class="chip" data-filter="verified" onclick="setChip(this)">✓ فروشنده معتبر</button><button class="chip" data-filter="offer" onclick="setChip(this)">پیشنهاد قیمت فعال</button><button class="chip" data-filter="auction" onclick="setChip(this)">مزایده</button></div>
+ </div>
+ <div class="product-grid" id="productGrid"></div><div class="empty" id="empty">چیزی پیدا نشد. فیلترها را تغییر بده یا اولین آگهی را ثبت کن.</div>
+</section>
+<section id="features">
+ <div class="section-head"><div><h2>همه ابزارهای معامله</h2><p>هر چیزی که برای یک بازار حرفه‌ای نیاز داری</p></div></div>
+ <div class="feature-grid">
+  <article class="feature"><div class="ico">🏷️</div><h3>قیمت‌گذاری آزاد</h3><p>فروشنده قیمت دلخواه خود را به TON تعیین می‌کند.</p></article>
+  <article class="feature"><div class="ico">🤝</div><h3>پیشنهاد خرید</h3><p>خریدار پیشنهاد می‌دهد و فروشنده قبول یا رد می‌کند.</p></article>
+  <article class="feature"><div class="ico">⏳</div><h3>مزایده</h3><p>برای دارایی خود قیمت پایه و زمان پایان مشخص کن.</p></article>
+  <article class="feature"><div class="ico">📦</div><h3>بسته‌های چندتایی</h3><p>چند گیفت یا NFT را در یک آگهی عرضه کن.</p></article>
+  <article class="feature"><div class="ico">♡</div><h3>علاقه‌مندی‌ها</h3><p>آگهی‌های موردعلاقه‌ات را برای بعد نگه دار.</p></article>
+  <article class="feature"><div class="ico">🔔</div><h3>هشدار قیمت</h3><p>برای نسخه بعدی: اعلان تغییر قیمت و آگهی جدید.</p></article>
+  <article class="feature"><div class="ico">👤</div><h3>پروفایل فروشنده</h3><p>اعتبار، آگهی‌ها و سابقه معاملات هر کاربر.</p></article>
+  <article class="feature"><div class="ico">🧾</div><h3>تاریخچه معاملات</h3><p>نمایش شفاف رویدادها و وضعیت سفارش‌ها.</p></article>
+  <article class="feature"><div class="ico">🛡️</div><h3>معامله امن</h3><p>اتصال به قرارداد و تأیید تراکنش در مرحله فنی بعدی.</p></article>
+ </div>
+</section>
+<section class="panel" id="activity"><h2>آخرین فعالیت‌های بازار</h2><div class="activity"><b>🎁 Premium Gift</b><span>آگهی جدید · ۱۲ TON</span></div><div class="activity"><b>💎 Diamond NFT</b><span>پیشنهاد خرید · ۸ TON</span></div><div class="activity"><b>🌹 Rose Gift</b><span>قیمت به‌روزرسانی شد · ۳.۵ TON</span></div></section>
+<section class="panel"><h2>پنل سریع من</h2><div class="feature-grid"><button class="btn secondary" onclick="openModal('listingModal')">＋ ثبت آگهی</button><button class="btn secondary" onclick="showMyListings()">آگهی‌های من</button><button class="btn secondary" onclick="toast('پیشنهادهای شما پس از اتصال حساب نمایش داده می‌شوند')">پیشنهادهای من</button></div><div id="myListings" style="margin-top:12px"></div></section>
 </main>
-<footer>© 2026 MARKET ZON | Demo Marketplace</footer>
+<footer class="footer" id="footer"><div class="wrap footerinner"><div><b style="color:var(--mint)">MARKET ZON</b><br>بازار آزاد گیفت و NFT تلگرام</div><div>نسخه نمایشی رابط کاربری · ساخته‌شده برای توسعه به Mini App تلگرام</div><div>© 2026 MARKET ZON</div></div></footer>
+<nav class="bottomnav"><button class="active" onclick="goTo('market',this)"><b>⌂</b>بازار</button><button onclick="openModal('listingModal')"><b>＋</b>فروش</button><button onclick="showMyListings();goTo('myListings',this)"><b>▣</b>دارایی من</button><button onclick="goTo('activity',this)"><b>⇄</b>معاملات</button><button onclick="toast('پروفایل در نسخه بعدی فعال می‌شود')"><b>☻</b>پروفایل</button></nav>
+<div class="modalback" id="listingModal" onclick="backdropClose(event,'listingModal')"><div class="modal"><div class="modalhead"><h3>ثبت آگهی جدید</h3><button class="close" onclick="closeModal('listingModal')">✕</button></div>
+ <form id="listingForm" onsubmit="createListing(event)">
+  <div class="field"><label>نوع دارایی</label><select id="newKind"><option value="gift">گیفت تلگرام</option><option value="nft">NFT</option></select></div>
+  <div class="field"><label>نام دارایی</label><input id="newName" required maxlength="48" placeholder="مثلاً Rare Rose Gift"></div>
+  <div class="field"><label>قیمت فروش (TON)</label><input id="newPrice" required type="number" min="0.01" step="0.01" placeholder="مثلاً 12.5"></div>
+  <div class="field"><label>ایموجی یا نماد نمایشی</label><input id="newEmoji" maxlength="8" placeholder="🎁" value="🎁"></div>
+  <div class="field"><label>روش فروش</label><select id="newSale"><option value="fixed">قیمت ثابت + دریافت پیشنهاد</option><option value="auction">مزایده نمایشی</option></select></div>
+  <div class="field"><label>توضیحات (اختیاری)</label><textarea id="newDesc" maxlength="180" placeholder="جزئیات، ویژگی کمیاب یا توضیح دارایی..."></textarea></div>
+  <button class="btn primary" style="width:100%;margin-top:8px" type="submit">ثبت آگهی نمایشی</button>
+  <p class="modalnote">این آگهی فقط در همین مرورگر ذخیره می‌شود و هنوز به کاربران دیگر یا بلاک‌چین منتشر نمی‌شود.</p>
+ </form></div></div>
+<div class="modalback" id="offerModal" onclick="backdropClose(event,'offerModal')"><div class="modal"><div class="modalhead"><h3>ارسال پیشنهاد خرید</h3><button class="close" onclick="closeModal('offerModal')">✕</button></div><div id="offerTitle" style="color:var(--mint);font-weight:bold"></div><div class="field"><label>پیشنهاد شما (TON)</label><input id="offerPrice" type="number" min="0.01" step="0.01" placeholder="قیمت پیشنهادی"></div><div class="field"><label>اعتبار پیشنهاد</label><select id="offerExpiry"><option>۱ ساعت</option><option>۶ ساعت</option><option>۲۴ ساعت</option><option>۳ روز</option></select></div><button class="btn primary" style="width:100%" onclick="sendOffer()">ثبت پیشنهاد نمایشی</button><p class="modalnote">ارسال پیشنهاد در این نسخه آزمایشی است و معامله یا رزرو واقعی انجام نمی‌دهد.</p></div></div>
+<div class="toast" id="toast"></div>
 <script>
-let selected='all';
-function category(type,btn){
-selected=type;
-document.querySelectorAll('.categories button').forEach(b=>b.classList.remove('active'));
-btn.classList.add('active');
-filter();
-}
-function filter(){
-let q=document.getElementById('search').value.toLowerCase();
-document.querySelectorAll('.card').forEach(c=>{
-let matchType=selected==='all'||c.dataset.type===selected;
-let matchName=c.innerText.toLowerCase().includes(q);
-c.style.display=matchType&&matchName?'block':'none';
-});
-}
-function buy(name){
-alert('این نسخه نمایشی است. انتخاب شما: '+name+' | پرداخت واقعی فعال نیست.');
-}
-</script>
-</body>
-</html>
+const seed=[
+{id:1,name:'Premium Gift',kind:'gift',price:12,emoji:'🎁',owner:'zon_user',verified:true,offer:true,desc:'گیفت تلگرام · آگهی نمونه'},
+{id:2,name:'Diamond NFT',kind:'nft',price:28,emoji:'💎',owner:'diamond_x',verified:true,offer:true,desc:'کلکسیون دیجیتال · آگهی نمونه'},
+{id:3,name:'Rose Gift',kind:'gift',price:3.5,emoji:'🌹',owner:'rose_shop',verified:false,offer:true,desc:'گیفت رز · آگهی نمونه'},
+{id:4,name:'Rocket NFT',kind:'nft',price:45,emoji:'🚀',owner:'ton_collector',verified:true,offer:false,desc:'آیتم کلکسیونی · آگهی نمونه'},
+{id:5,name:'Trophy Gift',kind:'gift',price:19,emoji:'🏆',owner:'gift_house',verified:true,offer:true,desc:'گیفت جام · آگهی نمونه'},
+{id:6,name:'Bear NFT',kind:'nft',price:22,emoji:'🧸',owner:'bear_world',verified:false,offer:false,desc:'NFT خرس · آگهی نمونه'},
+{id:7,name:'Starry Night',kind:'nft',price:16,emoji:'🌌',owner:'nightowl',verified:true,offer:true,desc:'آیتم ویژه · آگهی نمونه'},
+{id:8,name:'Lucky Clover',kind:'gift',price:7.2,emoji:'🍀',owner:'luckyton',verified:false,offer:true,desc:'گیفت شبدر · آگهی نمونه'}
+];
+let products=[...seed,...JSON.parse(localStorage.getItem('mzListings')||'[]')],chip='all',offerFor=null;
+const fmt=n=>Number(n).toLocaleString('fa-IR',{maximumFractionDigits:2});
+function renderProducts(){let q=document.getElementById('search').value.trim().toLowerCase(),kind=document.getElementById('kind').value,sort=document.getElementById('sort').value;let arr=products.filter(p=>(kind==='all'||p.kind===kind)&&(chip==='all'||chip==='gift'&&p.kind==='gift'||chip==='nft'&&p.kind==='nft'||chip==='verified'&&p.verified||chip==='offer'&&p.offer||chip==='auction'&&p.auction)&&(p.name+' '+p.owner+' '+(p.desc||'
